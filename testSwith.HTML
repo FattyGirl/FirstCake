@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="switchcontent.js" ></script>
+
+<script type="text/javascript" src="switchicon.js">
+
+/***********************************************
+* Switch Content script II (icon based)- (c) Dynamic Drive (www.dynamicdrive.com)
+* Requires switchcontent.js and included before this file!
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<style type="text/css">
+
+/*Default style for SPAN icons. Edit if desired: */
+
+.iconspan{
+float: right;
+margin: 3px;
+cursor:hand;
+cursor:pointer;
+font-weight: bold;
+}
+
+/*CSS used to style the examples. Remove if desired: */
+
+.eg-bar{
+background-color: #EEF5D3;
+font-weight: bold;
+border: 1px solid black;
+padding: 3px;
+}
+
+div.eg-bar{
+width: 500px;
+}
+
+.icongroup1{
+width: 500px;
+}
+
+</style>
+
+<head>
+<body>
+<h2>Demo 1:</h2>
+<p><a href="javascript:faq.sweepToggle('contract')">Contract All</a> | <a href="javascript:faq.sweepToggle('expand')">Expand All</a></p>
+
+<div class="eg-bar"><span id="faq1-title" class="iconspan"><img src="minus.gif" /></span>What is JavaScript?</div>
+<div id="faq1" class="icongroup1">
+JavaScript is a scripting language originally developed by Netscape to add interactivity and power to web documents. It is purely client side, and runs completely on the client's browser and computer.
+</div>
+<br />
+
+<div class="eg-bar""><span id="faq2-title" class="iconspan"><img src="minus.gif" /></span>Difference between Java & JavaScript?</div>
+<div id="faq2" class="icongroup1">
+Java is completely different from JavaScript- the former is a compiled language while the later is a scripting language.
+</div>
+<br />
+
+<div class="eg-bar""><span id="faq3-title" class="iconspan"><img src="minus.gif" /></span>What is DHTML?</div>
+<div id="faq3" class="icongroup1">
+DHTML is the combining of HTML, CSS, and JavaScript.
+</div>
+<br />
+
+<script type="text/javascript">
+
+var faq=new switchicon("icongroup1", "div") //Limit scanning of switch contents to just "div" elements
+faq.setHeader('<img src="minus.gif" />', '<img src="plus.gif" />') //set icon HTML
+faq.collapsePrevious(true) //Allow only 1 content open at any time
+faq.setPersist(false) //No persistence enabled
+faq.defaultExpanded(0) //Set 1st content to be expanded by default
+faq.init()
+
+</script>
+
+<h2>Demo 2:</h2>
+
+<table border="0" cellspacing="0" cellpadding="0" style="width: 400px;">
+	<tr>
+		<td class="eg-bar">
+				<span id="faqtable1-title" class="iconspan"><img src="minus.gif" /></span>How hot is our Sun?
+		</td>
+	</tr>
+ <tr>
+		<td>
+			<div id="faqtable1" class="icongroup2">
+			The surface of the Sun is around 5800 Kelvin, while the core reaches over 15 million Kelvin.
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="eg-bar">
+			<span id="faqtable2-title" class="iconspan"><img src="minus.gif" /></span>How big is our Sun in terms of mass?	
+		</td>
+	</tr>
+ <tr>
+		<td>
+			<div id="faqtable2" class="icongroup2">
+			The contains more than 99.8% of the total mass of our Solar System.
+			</div>
+		</td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+
+var faqtable=new switchicon("icongroup2", "div") //Limit scanning of switch contents to just "div" elements
+faqtable.setHeader('[Hide]', '[Show]') //Set header HTML
+faqtable.collapsePrevious(false) //Allow more than 1 content to be open simultanously
+faqtable.setPersist(true, 7) //Enable persistence to remember last switch content states for 7 days
+faqtable.init()
+
+</script>
+</body>
+</html>
